@@ -1,0 +1,31 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Fix for mobile viewport height */
+:root {
+  --vh: 1vh;
+}
+
+html, body {
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
